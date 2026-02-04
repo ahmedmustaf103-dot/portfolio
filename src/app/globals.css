@@ -137,6 +137,11 @@ code {
   outline-offset: 2px;
 }
 
+/* Smooth scroll for anchor links (e.g. View Projects → #projects) */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Base styles */
 body {
   font-family: 'Geist', sans-serif;

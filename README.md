@@ -1,156 +1,79 @@
-# Mikhail Builds Website Template for Beginners
+# Mustaf Ahmed — Portfolio
 
-A modern, beginner-friendly Next.js template designed for rapid web development with Cursor IDE integration.
+A personal portfolio site for **Mustaf Ahmed**, frontend developer. Built with Next.js, React, and Tailwind CSS. Showcases projects, skills, and contact info.
 
-## 🚀 Tech Stack
+## What’s in it
 
-- **Framework**: Next.js 16 with App Router
-- **Language**: TypeScript for type safety
-- **UI Library**: React 19
-- **Styling**: Tailwind CSS v4 with custom animations
-- **Development**: Turbopack for fast builds
-- **Linting**: ESLint with Next.js configuration
-- **Build Tool**: PostCSS with Autoprefixer
+- **Hero** — Name, role, tagline, “View Projects” CTA  
+- **About** — Short bio and what you’re looking for  
+- **Skills & Tech** — Tech stack list  
+- **My Projects** — Projects with live demos (Vercel) and GitHub links  
+- **Work with me** — Availability line  
+- **Contact** — Email and social links (GitHub, LinkedIn)  
+- **Nav** — Sticky header with About, My Projects, Contact  
+- **Footer** — Same links, social, copyright  
 
-## ✨ Features
+## Tech stack
 
-- **Modern UI Components**: Pre-built Hero component with animated gradient backgrounds
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **TypeScript Support**: Full type checking and IntelliSense
-- **Custom Animations**: Blob animations and smooth transitions
-- **Developer Experience**: Optimized with Turbopack for lightning-fast development
-- **Cursor IDE Integration**: Designed to work seamlessly with Cursor's AI agent
-- **Authentication Ready**: Clerk integration guide included
-- **Backend Ready**: Convex database integration guide included
+- **Next.js** (App Router)
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
 
-## 🛠 Getting Started
+## Run locally
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18 or higher)
-- [Cursor IDE](https://cursor.sh/) (recommended)
-
-### Installation
-
-1. **Download Cursor IDE**
-   - Visit [cursor.sh](https://cursor.sh/) and download the latest version
-
-2. **Clone the repository**
+1. **Clone and install**
    ```bash
-   git clone https://github.com/mwijanarko1/template.git
+   git clone <your-repo-url>
    cd template
-   ```
-
-3. **Install dependencies**
-   ```bash
    npm install
    ```
 
-4. **Start the development server**
+2. **Start dev server**
    ```bash
    npm run dev
    ```
 
-5. **Open Cursor Composer**
-   - Press `CMD + I` to open the Composer
-   - Make sure to select the "Agent" mode
+3. Open [http://localhost:3000](http://localhost:3000).
 
-6. **Use the AI Agent**
-   - Copy the contents of the `docs/PROMPT.txt` file and paste it into the Composer Agent
-   - Let the AI generate your project structure and components
-   - Chat with the agent to build features - it will handle the coding for you
+## Deploy (e.g. Vercel)
 
-7. **Fix any issues**
-   - If errors occur, copy/paste the error or screenshot it
-   - Ask the agent to fix the specific error
+1. Push this repo to GitHub (or GitLab, Bitbucket).
+2. Go to [vercel.com](https://vercel.com) and sign in.
+3. **Add New Project** → import this repo.
+4. Leave defaults (framework: Next.js) and click **Deploy**.
+5. Use the generated URL (e.g. `your-portfolio.vercel.app`) on your resume and LinkedIn.
 
-## 📁 Project Structure
+**Build command:** `npm run build`  
+**Output directory:** (default)  
+**Install command:** `npm install`
+
+## Project structure
 
 ```
-template/
-├── docs/                       # Documentation and guides
-│   ├── PROMPT.txt             # AI agent prompt instructions
-│   ├── CURSOR_GUIDE.md        # Comprehensive Cursor IDE guide
-│   ├── clerk/                 # Clerk authentication guides
-│   │   └── clerk-auth-guide.md
-│   └── convex/                # Convex database guides
-│       ├── convex-db-guide.md
-│       └── convex_rules.mdc
-├── for-agent/                 # Agent-specific instructions
-│   ├── deployment.txt         # Deployment guidelines
-│   ├── guidelines.txt         # General coding guidelines
-│   ├── modes.txt              # Agent modes and instructions
-│   └── ui-guide.txt           # UI/UX guidelines
-├── src/                       # Source code
-│   ├── app/
-│   │   ├── layout.tsx         # Root layout component
-│   │   ├── page.tsx           # Home page
-│   │   ├── globals.css        # Global styles
-│   │   └── favicon.ico        # App favicon
-│   └── components/
-│       └── Hero.tsx           # Hero section component
-├── tailwind.config.js         # Tailwind CSS configuration
-├── next.config.mjs            # Next.js configuration
-├── postcss.config.mjs         # PostCSS configuration
-├── eslint.config.mjs          # ESLint configuration
-└── package.json               # Dependencies and scripts
+src/
+├── app/
+│   ├── layout.tsx    # Root layout, metadata, fonts
+│   ├── page.tsx      # Home page (all sections)
+│   ├── loading.tsx   # Root loading state
+│   └── globals.css   # Global styles, Tailwind
+└── components/
+    ├── Nav.tsx
+    ├── Hero.tsx
+    ├── About.tsx
+    ├── Skills.tsx
+    ├── Projects.tsx
+    ├── WorkWithMe.tsx
+    ├── Testimonial.tsx
+    ├── Contact.tsx
+    └── Footer.tsx
 ```
 
-## 📚 Documentation
+## Customize
 
-### Codebase Architecture
-For a comprehensive overview of the codebase structure, architecture diagrams, data flows, and navigation guide, see [`docs/CODEBASE_MAP.md`](docs/CODEBASE_MAP.md).
+- **Content** — Edit `src/app/page.tsx`: projects, skills, About text, Hero tagline, Contact email/links.
+- **Styling** — Components use Tailwind; tweak classes in `src/components/` and `src/app/globals.css`.
 
-### Cursor IDE Guide
-Check `docs/CURSOR_GUIDE.md` for detailed instructions on using Cursor IDE effectively with this template.
+## License
 
-### Authentication (Clerk)
-The `docs/clerk/` directory contains guides for integrating Clerk authentication into your project.
-
-### Backend/Database (Convex)
-The `docs/convex/` directory contains guides for setting up Convex as your backend and database solution.
-
-### Agent Instructions
-The `for-agent/` directory contains instructions that help the AI agent understand how to work with your project:
-- **deployment.txt**: Deployment best practices
-- **guidelines.txt**: General coding standards
-- **modes.txt**: Different agent modes and when to use them
-- **ui-guide.txt**: UI/UX design guidelines
-
-## 🎨 Customization
-
-### Styling
-- Modify `tailwind.config.js` to add custom colors, fonts, or animations
-- Update `src/app/globals.css` for global styles
-- Components use Tailwind utility classes for easy customization
-
-### Components
-- Add new components in `src/components/`
-- Import and use them in your pages
-- Follow the existing Hero component pattern
-
-## 🚀 Deployment
-
-### Build for Production
-```bash
-npm run build
-```
-
-### Start Production Server
-```bash
-npm start
-```
-
-The template is ready to deploy to Vercel, Netlify, or any other hosting platform that supports Next.js.
-
-## 🤝 Contributing
-
-This template is designed to be extended and customized. Feel free to:
-- Add new components
-- Modify the styling
-- Extend functionality
-- Share your improvements
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
+MIT

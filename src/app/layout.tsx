@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 // Initialize the Geist font with Latin subset
@@ -16,33 +17,22 @@ const geistMono = Geist_Mono({
 
 // Define metadata for better SEO
 export const metadata: Metadata = {
-  title: "Next.js Beginner Template",
-  description: "A beginner-friendly Next.js template with TailwindCSS and TypeScript",
-  keywords: ["Next.js", "React", "TailwindCSS", "TypeScript", "Template"],
-  authors: [{ name: "Created with Cursor Agent" }],
-  creator: "Cursor Agent",
-  publisher: "Cursor Agent",
+  title: "Mustaf Ahmed — Frontend Developer",
+  description: "Frontend developer building fast, polished web experiences. View my projects and get in touch.",
+  keywords: ["Mustaf Ahmed", "Frontend Developer", "Web Developer", "React", "Next.js", "TypeScript", "Portfolio"],
+  authors: [{ name: "Mustaf Ahmed" }],
+  creator: "Mustaf Ahmed",
   openGraph: {
-    title: "Next.js Beginner Template",
-    description: "A beginner-friendly Next.js template with TailwindCSS and TypeScript",
-    url: "https://nextjs.org/",
-    siteName: "Next.js Beginner Template",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Next.js Beginner Template",
-      },
-    ],
+    title: "Mustaf Ahmed — Frontend Developer",
+    description: "Frontend developer building fast, polished web experiences. View my projects and get in touch.",
+    siteName: "Mustaf Ahmed",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js Beginner Template",
-    description: "A beginner-friendly Next.js template with TailwindCSS and TypeScript",
-    images: ["/og-image.png"],
+    title: "Mustaf Ahmed — Frontend Developer",
+    description: "Frontend developer building fast, polished web experiences. View my projects and get in touch.",
   },
   robots: {
     index: true,
@@ -58,9 +48,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 text-slate-100`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
