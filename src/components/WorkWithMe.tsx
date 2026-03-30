@@ -13,7 +13,7 @@ export default function WorkWithMe({
   subtitle,
 }: WorkWithMeProps) {
   return (
-    <section className="w-full bg-slate-800/80 py-12 sm:py-14 md:py-16 px-6 sm:px-8 md:px-12 border-t border-slate-700">
+    <section className="w-full bg-slate-900 py-12 sm:py-14 md:py-16 px-6 sm:px-8 md:px-12 border-t border-slate-800">
       <div className="max-w-2xl mx-auto text-center">
         <p className="text-xl sm:text-2xl font-semibold text-white mb-2">
           {line}

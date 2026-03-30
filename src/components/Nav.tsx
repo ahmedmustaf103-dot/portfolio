@@ -24,11 +24,11 @@ export default function Nav({
   links = defaultLinks,
 }: NavProps) {
   return (
-    <nav className="sticky top-0 z-50 w-full bg-slate-900/95 backdrop-blur-sm border-b border-slate-700">
+    <nav className="sticky top-0 z-50 w-full bg-slate-950/95 backdrop-blur-md border-b border-slate-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-8 md:px-12 py-3 sm:py-4 flex flex-wrap items-center justify-between gap-3 sm:gap-4">
         <a
           href="#"
-          className="text-base sm:text-lg font-semibold text-white hover:text-slate-200 transition-colors shrink-0"
+          className="text-base sm:text-lg font-semibold text-white hover:text-slate-200 transition-colors shrink-0 tracking-tight"
         >
           {name}
         </a>
@@ -37,7 +37,7 @@ export default function Nav({
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm sm:text-base text-slate-300 hover:text-white font-medium transition-colors"
+                className="text-sm sm:text-base text-slate-300 hover:text-slate-100 font-medium transition-colors"
               >
                 {link.label}
               </a>

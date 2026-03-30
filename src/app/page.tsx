@@ -1,12 +1,7 @@
-import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
-import WorkWithMe from "@/components/WorkWithMe";
-import Testimonial from "@/components/Testimonial";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 
 const skills = [
   "React",
@@ -15,30 +10,46 @@ const skills = [
   "JavaScript",
   "Tailwind CSS",
   "HTML & CSS",
+  "Responsive Design",
+  "Web Accessibility",
+  "Git & GitHub",
+  "AI-assisted development",
 ];
 
 const projects = [
   {
-    title: "Cookie Clicker",
-    description: "A classic incremental clicker game built with vanilla JavaScript. Tracks clicks, upgrades, and progress with a clean UI.",
-    highlight: "First time wiring game logic and state without a framework.",
-    href: "https://github.com/ahmedmustaf103-dot/cookie-clicker",
-    liveHref: "https://cookie-clicker-gules-omega.vercel.app/",
-    tech: ["JavaScript", "HTML", "CSS"],
+    title: "Ecommerce Site",
+    description:
+      "A responsive ecommerce frontend with clear product browsing and a streamlined user flow.",
+    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Ecommerce+Site",
+    githubHref: "https://github.com/ahmedmustaf103-dot/ecomerce",
+    liveHref: "https://ecomerce-phi.vercel.app/",
+    tech: ["React", "JavaScript", "HTML", "CSS"],
   },
   {
-    title: "Todo React App",
-    description: "A task manager built with React. Add, complete, and manage todos with a simple, responsive interface.",
-    highlight: "Solidified React state and component composition.",
-    href: "https://github.com/ahmedmustaf103-dot/todo-react-app",
-    liveHref: "https://todo-react-app-green-kappa.vercel.app/",
-    tech: ["React", "CSS"],
+    title: "Movie Site",
+    description:
+      "A movie discovery web app built with typed components and a clean, mobile-first layout.",
+    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Movie+Site",
+    githubHref: "https://github.com/ahmedmustaf103-dot/moviesite",
+    liveHref: "https://moviesite-tau-lake.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    title: "Finance Dashboard",
+    description:
+      "A finance dashboard UI presenting key metrics with clear hierarchy and responsive card layouts.",
+    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Finance+Dashboard",
+    githubHref: "https://github.com/ahmedmustaf103-dot/dashboard",
+    liveHref: "https://dashboard-ivory-eta-66.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
     title: "Chatbot React",
-    description: "A conversational chatbot interface built with React and JavaScript. Demonstrates component structure and state handling.",
-    highlight: "Built a full UI flow and learned to structure chat-style UIs.",
-    href: "https://github.com/ahmedmustaf103-dot/chatbot-react",
+    description:
+      "A chatbot interface focused on conversation flow, reusable message components, and smooth UX.",
+    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Chatbot+React",
+    githubHref: "https://github.com/ahmedmustaf103-dot/chatbot-react",
     liveHref: "https://chatbot-react-tawny.vercel.app/",
     tech: ["React", "JavaScript"],
   },
@@ -46,50 +57,21 @@ const projects = [
 
 export default function Home() {
   return (
-    <>
-      <Nav name="Mustaf Ahmed" />
+    <main className="bg-[#0f0f0f] text-white">
       <Hero
         name="Mustaf Ahmed"
-        tagline="I build web apps that are fast and easy to use—and I'd love to build yours."
+        role="Junior Frontend Developer"
+        intro="I build clean, responsive, and user-focused web interfaces using React, Next.js, and TypeScript."
       />
-      <About heading="About">
-        <p>
-          I'm Mustaf Ahmed, a frontend developer focused on building clean,
-          responsive web apps and side projects with React, Next.js, and
-          TypeScript.
-        </p>
-        <p>
-          I care about fast, accessible interfaces—and I enjoy turning ideas
-          into real products while learning new tools as I go.
-        </p>
-        <p>
-          I'm looking for my first full-time role or freelance work—remote or
-          on-site.
-        </p>
-      </About>
-      <Skills heading="Skills & Tech" skills={skills} />
-      <Projects heading="My Projects" projects={projects} />
-      <WorkWithMe line="Available for freelance and full-time roles." />
-      <Testimonial
-        quote="Add a short quote from a mentor, peer, or client when you have one."
-        attribution="— Name, Role or Company"
-      />
+      <Projects projects={projects} />
+      <Skills skills={skills} />
       <Contact
-        heading="Get in touch"
         email="ahmedmustaf103@gmail.com"
-        copy="Have a project in mind or want to chat? I'd love to hear from you."
         links={[
           { label: "GitHub", href: "https://github.com/ahmedmustaf103-dot" },
           { label: "LinkedIn", href: "https://www.linkedin.com/in/mustaf-ahmed-a08619398/" },
         ]}
       />
-      <Footer
-        name="Mustaf Ahmed"
-        socialLinks={[
-          { label: "GitHub", href: "https://github.com/ahmedmustaf103-dot" },
-          { label: "LinkedIn", href: "https://www.linkedin.com/in/mustaf-ahmed-a08619398/" },
-        ]}
-      />
-    </>
+    </main>
   );
 }

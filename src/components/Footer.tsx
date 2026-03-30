@@ -31,7 +31,7 @@ export default function Footer({
   const copy = copyright ?? `© ${year} ${name}`;
 
   return (
-    <footer className="w-full bg-slate-800/80 py-10 sm:py-12 px-6 sm:px-8 md:px-12 border-t border-slate-700">
+    <footer className="w-full bg-slate-900 py-10 sm:py-12 px-6 sm:px-8 md:px-12 border-t border-slate-800">
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
           {navLinks.map((link) => (
@@ -58,7 +58,7 @@ export default function Footer({
           ))}
         </div>
       </div>
-      <p className="max-w-4xl mx-auto mt-6 pt-6 border-t border-slate-700 text-center text-sm text-slate-400">
+      <p className="max-w-4xl mx-auto mt-6 pt-6 border-t border-slate-800 text-center text-sm text-slate-400">
         {copy}
       </p>
     </footer>
