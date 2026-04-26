@@ -11,7 +11,7 @@ export default function Skills({ skills }: SkillsProps) {
     <Section
       id="skills"
       title="Skills"
-      subtitle="Core frontend tools and practices I use to build reliable interfaces."
+      subtitle="Core full-stack tools and practices I use to build, deploy, and maintain production-ready web apps."
     >
       <ul className="flex flex-wrap gap-3 sm:gap-4">
         {skills.map((skill) => (

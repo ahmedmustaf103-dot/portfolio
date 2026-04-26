@@ -1,6 +1,6 @@
 # Mustaf Ahmed — Portfolio
 
-A personal portfolio site for **Mustaf Ahmed**, frontend developer. Built with Next.js, React, and Tailwind CSS. Showcases projects, skills, and contact info.
+A personal portfolio site for **Mustaf Ahmed**, Full-Stack Developer (React). Built with Next.js, React, and Tailwind CSS. Showcases projects, skills, and contact info.
 
 ## What’s in it
 

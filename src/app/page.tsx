@@ -6,6 +6,7 @@ import Contact from "@/components/Contact";
 const skills = [
   "React",
   "Next.js",
+  "Firebase",
   "TypeScript",
   "JavaScript",
   "Tailwind CSS",
@@ -20,7 +21,7 @@ const projects = [
   {
     title: "Ecommerce Site",
     description:
-      "A responsive ecommerce frontend with clear product browsing and a streamlined user flow.",
+      "A full-stack ecommerce app with authentication, product data management, and API-driven user flows.",
     image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Ecommerce+Site",
     githubHref: "https://github.com/ahmedmustaf103-dot/ecomerce",
     liveHref: "https://ecomerce-phi.vercel.app/",
@@ -29,7 +30,7 @@ const projects = [
   {
     title: "Movie Site",
     description:
-      "A movie discovery web app built with typed components and a clean, mobile-first layout.",
+      "A movie discovery frontend built with Next.js and TypeScript, consuming external APIs with a clean mobile-first UI.",
     image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Movie+Site",
     githubHref: "https://github.com/ahmedmustaf103-dot/moviesite",
     liveHref: "https://moviesite-tau-lake.vercel.app/",
@@ -38,7 +39,7 @@ const projects = [
   {
     title: "Finance Dashboard",
     description:
-      "A finance dashboard UI presenting key metrics with clear hierarchy and responsive card layouts.",
+      "A responsive finance dashboard interface focused on clear data presentation, card layout, and fast navigation.",
     image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Finance+Dashboard",
     githubHref: "https://github.com/ahmedmustaf103-dot/dashboard",
     liveHref: "https://dashboard-ivory-eta-66.vercel.app/",
@@ -47,7 +48,7 @@ const projects = [
   {
     title: "Chatbot React",
     description:
-      "A chatbot interface focused on conversation flow, reusable message components, and smooth UX.",
+      "A chatbot web app using API-based responses, component-driven architecture, and smooth conversation UX.",
     image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Chatbot+React",
     githubHref: "https://github.com/ahmedmustaf103-dot/chatbot-react",
     liveHref: "https://chatbot-react-tawny.vercel.app/",
@@ -60,8 +61,8 @@ export default function Home() {
     <main className="bg-[#0f0f0f] text-white">
       <Hero
         name="Mustaf Ahmed"
-        role="Junior Frontend Developer"
-        intro="I build clean, responsive, and user-focused web interfaces using React, Next.js, and TypeScript."
+        role="Full-Stack Developer (React)"
+        intro="Full-Stack Developer | React • Firebase • APIs | Building & Deploying Real-World Web Apps. My ecommerce platform is full-stack, and I also build strong frontend apps with API integrations."
       />
       <Projects projects={projects} />
       <Skills skills={skills} />

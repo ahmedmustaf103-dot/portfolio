@@ -9,7 +9,7 @@ interface HeroProps {
 
 export default function Hero({
   name,
-  role = "Junior Frontend Developer",
+  role = "Full-Stack Developer (React)",
   intro,
   projectsHref = "#projects",
 }: HeroProps) {

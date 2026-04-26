@@ -10,23 +10,25 @@ const inter = Inter({
 
 // Define metadata for better SEO
 export const metadata: Metadata = {
-  title: "Mustaf Ahmed — Frontend Developer",
+  title: "Mustaf Ahmed — Full-Stack Developer (React)",
   description:
-    "Junior frontend developer building clean, modern, and responsive web applications.",
-  keywords: ["Mustaf Ahmed", "Frontend Developer", "Web Developer", "React", "Next.js", "TypeScript", "Portfolio"],
+    "Full-Stack Developer (React) who built and deployed a full-stack ecommerce app with Firebase, authentication, databases, and APIs, and also ships frontend projects with strong API integration.",
+  keywords: ["Mustaf Ahmed", "Full-Stack Developer (React)", "Web Developer", "React", "Firebase", "APIs", "Portfolio"],
   authors: [{ name: "Mustaf Ahmed" }],
   creator: "Mustaf Ahmed",
   openGraph: {
-    title: "Mustaf Ahmed — Frontend Developer",
-    description: "Frontend developer building fast, polished web experiences. View my projects and get in touch.",
+    title: "Mustaf Ahmed — Full-Stack Developer (React)",
+    description:
+      "Full-Stack Developer (React) who built and deployed a full-stack ecommerce app with Firebase, authentication, databases, and APIs, and also ships frontend projects with strong API integration.",
     siteName: "Mustaf Ahmed",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mustaf Ahmed — Frontend Developer",
-    description: "Frontend developer building fast, polished web experiences. View my projects and get in touch.",
+    title: "Mustaf Ahmed — Full-Stack Developer (React)",
+    description:
+      "Full-Stack Developer (React) who built and deployed a full-stack ecommerce app with Firebase, authentication, databases, and APIs, and also ships frontend projects with strong API integration.",
   },
   robots: {
     index: true,
