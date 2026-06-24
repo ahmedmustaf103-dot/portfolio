@@ -15,7 +15,7 @@ interface ContactProps {
 
 export default function Contact({
   email,
-  copy = "Open to frontend and full-stack opportunities. I build and deploy real-world web apps, including a full-stack ecommerce project with authentication, database workflows, and API integrations, and I use AI tools like Cursor to speed up debugging and development.",
+  copy = "Open to frontend and full-stack opportunities. I build and deploy real-world web apps and SaaS products with authentication, databases, and API integrations, and I use AI tools like Cursor to speed up debugging and development.",
   links = [],
 }: ContactProps) {
   return (

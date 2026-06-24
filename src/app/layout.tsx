@@ -12,14 +12,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Mustaf Ahmed — Full-Stack Developer (React)",
   description:
-    "Full-Stack Developer (React) who built and deployed a full-stack ecommerce app with Firebase, authentication, databases, and APIs, and also ships frontend projects with strong API integration.",
-  keywords: ["Mustaf Ahmed", "Full-Stack Developer (React)", "Web Developer", "React", "Firebase", "APIs", "Portfolio"],
+    "Full-Stack Developer (React) building and deploying SaaS and full-stack web apps with authentication, PostgreSQL, Firebase, APIs, and AI integrations.",
+  keywords: ["Mustaf Ahmed", "Full-Stack Developer (React)", "SaaS", "Web Developer", "React", "PostgreSQL", "Firebase", "APIs", "Portfolio"],
   authors: [{ name: "Mustaf Ahmed" }],
   creator: "Mustaf Ahmed",
   openGraph: {
     title: "Mustaf Ahmed — Full-Stack Developer (React)",
     description:
-      "Full-Stack Developer (React) who built and deployed a full-stack ecommerce app with Firebase, authentication, databases, and APIs, and also ships frontend projects with strong API integration.",
+      "Full-Stack Developer (React) building and deploying SaaS and full-stack web apps with authentication, PostgreSQL, Firebase, APIs, and AI integrations.",
     siteName: "Mustaf Ahmed",
     locale: "en_US",
     type: "website",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mustaf Ahmed — Full-Stack Developer (React)",
     description:
-      "Full-Stack Developer (React) who built and deployed a full-stack ecommerce app with Firebase, authentication, databases, and APIs, and also ships frontend projects with strong API integration.",
+      "Full-Stack Developer (React) building and deploying SaaS and full-stack web apps with authentication, PostgreSQL, Firebase, APIs, and AI integrations.",
   },
   robots: {
     index: true,

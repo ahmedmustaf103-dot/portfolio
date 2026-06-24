@@ -6,8 +6,11 @@ import Contact from "@/components/Contact";
 const skills = [
   "React",
   "Next.js",
-  "Firebase",
   "TypeScript",
+  "PostgreSQL",
+  "Prisma",
+  "Firebase",
+  "SaaS Development",
   "JavaScript",
   "Tailwind CSS",
   "HTML & CSS",
@@ -18,6 +21,15 @@ const skills = [
 ];
 
 const projects = [
+  {
+    title: "JobTracker AI",
+    description:
+      "A full-stack SaaS platform for tracking job applications with auth, PostgreSQL, dashboards, and AI-powered cover letters and resume analysis.",
+    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=JobTracker+AI",
+    githubHref: "https://github.com/ahmedmustaf103-dot/jobtracker-ai",
+    liveHref: "https://jobtracker-ai-tau.vercel.app/",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Auth.js"],
+  },
   {
     title: "Ecommerce Site",
     description:
@@ -62,7 +74,7 @@ export default function Home() {
       <Hero
         name="Mustaf Ahmed"
         role="Full-Stack Developer (React)"
-        intro="Full-Stack Developer | React • Firebase • APIs | Building & Deploying Real-World Web Apps. My ecommerce platform is full-stack, and I also build strong frontend apps with API integrations."
+        intro="Full-Stack Developer | React • Firebase • APIs | Building & Deploying Real-World Web Apps — including SaaS platforms with authentication, databases, and AI integrations."
       />
       <Projects projects={projects} />
       <Skills skills={skills} />
