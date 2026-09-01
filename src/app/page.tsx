@@ -9,6 +9,8 @@ const skills = [
   "TypeScript",
   "PostgreSQL",
   "Prisma",
+  "Clerk",
+  "Stripe",
   "Firebase",
   "SaaS Development",
   "JavaScript",
@@ -21,6 +23,14 @@ const skills = [
 ];
 
 const projects = [
+  {
+    title: "BookFlow AI",
+    description:
+      "A multi-tenant booking SaaS for barbers and salons — public booking, ops dashboard, Stripe billing, automation, and AI on one stack.",
+    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=BookFlow+AI",
+    liveHref: "https://bookflow-ai-isga.vercel.app/",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Clerk", "Stripe"],
+  },
   {
     title: "JobTracker AI",
     description:
@@ -74,7 +84,7 @@ export default function Home() {
       <Hero
         name="Mustaf Ahmed"
         role="Full-Stack Developer (React)"
-        intro="Full-Stack Developer | React • Firebase • APIs | Building & Deploying Real-World Web Apps — including SaaS platforms with authentication, databases, and AI integrations."
+        intro="Full-Stack Developer | React • Firebase • APIs | Building & Deploying Real-World Web Apps — including BookFlow AI, a multi-tenant booking SaaS with authentication, databases, and AI integrations."
       />
       <Projects projects={projects} />
       <Skills skills={skills} />
