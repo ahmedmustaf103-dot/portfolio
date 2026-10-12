@@ -1,100 +1,91 @@
-import Hero from "@/components/Hero";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
-
-const skills = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "PostgreSQL",
-  "Prisma",
-  "Clerk",
-  "Stripe",
-  "Firebase",
-  "SaaS Development",
-  "JavaScript",
-  "Tailwind CSS",
-  "HTML & CSS",
-  "Responsive Design",
-  "Web Accessibility",
-  "Git & GitHub",
-  "AI-assisted development",
-];
-
-const projects = [
-  {
-    title: "BookFlow AI",
-    description:
-      "A multi-tenant booking SaaS for barbers and salons — public booking, ops dashboard, Stripe billing, automation, and AI on one stack.",
-    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=BookFlow+AI",
-    liveHref: "https://bookflow-ai-isga.vercel.app/",
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Clerk", "Stripe"],
-  },
-  {
-    title: "JobTracker AI",
-    description:
-      "A full-stack SaaS platform for tracking job applications with auth, PostgreSQL, dashboards, and AI-powered cover letters and resume analysis.",
-    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=JobTracker+AI",
-    githubHref: "https://github.com/ahmedmustaf103-dot/jobtracker-ai",
-    liveHref: "https://jobtracker-ai-tau.vercel.app/",
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Auth.js"],
-  },
-  {
-    title: "Ecommerce Site",
-    description:
-      "A full-stack ecommerce app with authentication, product data management, and API-driven user flows.",
-    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Ecommerce+Site",
-    githubHref: "https://github.com/ahmedmustaf103-dot/ecomerce",
-    liveHref: "https://ecomerce-phi.vercel.app/",
-    tech: ["React", "JavaScript", "HTML", "CSS"],
-  },
-  {
-    title: "Movie Site",
-    description:
-      "A movie discovery frontend built with Next.js and TypeScript, consuming external APIs with a clean mobile-first UI.",
-    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Movie+Site",
-    githubHref: "https://github.com/ahmedmustaf103-dot/moviesite",
-    liveHref: "https://moviesite-tau-lake.vercel.app/",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    title: "Finance Dashboard",
-    description:
-      "A responsive finance dashboard interface focused on clear data presentation, card layout, and fast navigation.",
-    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Finance+Dashboard",
-    githubHref: "https://github.com/ahmedmustaf103-dot/dashboard",
-    liveHref: "https://dashboard-ivory-eta-66.vercel.app/",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    title: "Chatbot React",
-    description:
-      "A chatbot web app using API-based responses, component-driven architecture, and smooth conversation UX.",
-    image: "https://placehold.co/640x360/1a1a1a/ffffff?text=Chatbot+React",
-    githubHref: "https://github.com/ahmedmustaf103-dot/chatbot-react",
-    liveHref: "https://chatbot-react-tawny.vercel.app/",
-    tech: ["React", "JavaScript"],
-  },
-];
+import { BookFlowFeature } from "@/components/home/BookFlowFeature";
+import { Chapter } from "@/components/home/Chapter";
+import { Hero } from "@/components/home/Hero";
+import { InsightFlowFeature } from "@/components/home/InsightFlowFeature";
+import { JobTrackerFeature } from "@/components/home/JobTrackerFeature";
+import { OutlineRow } from "@/components/home/OutlineRow";
+import { ResearchFlowFeature } from "@/components/home/ResearchFlowFeature";
+import { site } from "@/content/site";
 
 export default function Home() {
   return (
-    <main className="bg-[#0f0f0f] text-white">
-      <Hero
-        name="Mustaf Ahmed"
-        role="Full-Stack Developer (React)"
-        intro="Full-Stack Developer | React • Firebase • APIs | Building & Deploying Real-World Web Apps — including BookFlow AI, a multi-tenant booking SaaS with authentication, databases, and AI integrations."
-      />
-      <Projects projects={projects} />
-      <Skills skills={skills} />
-      <Contact
-        email="ahmedmustaf103@gmail.com"
-        links={[
-          { label: "GitHub", href: "https://github.com/ahmedmustaf103-dot" },
-          { label: "LinkedIn", href: "https://www.linkedin.com/in/mustaf-ahmed-a08619398/" },
-        ]}
-      />
+    <main id="content" tabIndex={-1} className="outline-none">
+      <Hero />
+
+      <Chapter id="projects" index="02" label="Work" title="Selected engineering work">
+        <p className="-mt-6 mb-14 max-w-xl text-mute">
+          Three AI systems — job search, research, and data analysis — each built as
+          complete software, not a prompt wrapper.
+        </p>
+        <div className="space-y-24">
+          <JobTrackerFeature />
+          <ResearchFlowFeature />
+          <InsightFlowFeature />
+        </div>
+      </Chapter>
+
+      <Chapter id="experience" index="03" label="Experience" title="Commercial software">
+        <OutlineRow
+          id="experience-agentzero"
+          name="AgentZero"
+          summary="Contributions to an existing multi-tenant product codebase — inbound lead capture, WhatsApp callback routing, and careful work inside a live commercial system."
+        />
+      </Chapter>
+
+      <Chapter
+        id="products"
+        index="04"
+        label="Products"
+        title="Business products"
+        tone="warm"
+      >
+        <BookFlowFeature />
+      </Chapter>
+
+      <Chapter id="about" index="05" label="About" title="Building useful software">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <p className="max-w-xl text-mute">
+            I care about architecture, validation and whether a system still works when
+            the model is wrong. Most of my work sits between product thinking and
+            implementation — turning a practical problem into software someone can use.
+          </p>
+          <p className="max-w-xl text-mute">
+            I learn by shipping: structured outputs, tool integrations, tests, and the
+            unglamorous work of making an AI feature reliable enough to demo without
+            apology.
+          </p>
+        </div>
+      </Chapter>
+
+      <Chapter id="contact" index="06" label="Contact" title="Two conversations. One inbox.">
+        <div className="grid gap-10 border-t border-line pt-10 lg:grid-cols-2">
+          <div>
+            <h3 className="text-lg text-ink">For engineering roles</h3>
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-mute">
+              Open to AI engineering, AI software engineering, and full-stack roles.
+              The fastest way to evaluate my work is the three projects above and GitHub.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg text-ink">For business software</h3>
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-mute">
+              If you need a booking platform, internal tools, or suitable AI automation,
+              start with BookFlow and tell me what you run today.
+            </p>
+          </div>
+        </div>
+        <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm">
+          <a href={`mailto:${site.email}`} className="text-ink hover:text-signal">
+            {site.email}
+          </a>
+          <a href={site.github} target="_blank" rel="noopener noreferrer" className="text-mute hover:text-ink">
+            GitHub
+          </a>
+          <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="text-mute hover:text-ink">
+            LinkedIn
+          </a>
+        </div>
+      </Chapter>
     </main>
   );
 }

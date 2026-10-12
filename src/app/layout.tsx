@@ -1,34 +1,57 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono, Newsreader } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { AppShell } from "@/components/layout/AppShell";
+import { site } from "@/content/site";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin"],
+  display: "swap",
 });
 
-// Define metadata for better SEO
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const description = site.intro;
+
 export const metadata: Metadata = {
-  title: "Mustaf Ahmed — Full-Stack Developer (React)",
-  description:
-    "Full-Stack Developer (React) building and deploying SaaS and full-stack web apps with authentication, PostgreSQL, Firebase, APIs, and AI integrations.",
-  keywords: ["Mustaf Ahmed", "Full-Stack Developer (React)", "SaaS", "Web Developer", "React", "PostgreSQL", "Firebase", "APIs", "Portfolio"],
-  authors: [{ name: "Mustaf Ahmed" }],
-  creator: "Mustaf Ahmed",
+  title: `${site.name} — ${site.role}`,
+  description,
+  keywords: [
+    "Mustaf Ahmed",
+    "AI Engineer",
+    "Full-Stack Developer",
+    "AI Engineering",
+    "Next.js",
+    "JobTracker AI",
+    "ResearchFlow AI",
+    "InsightFlow AI",
+  ],
+  authors: [{ name: site.name }],
+  creator: site.name,
   openGraph: {
-    title: "Mustaf Ahmed — Full-Stack Developer (React)",
-    description:
-      "Full-Stack Developer (React) building and deploying SaaS and full-stack web apps with authentication, PostgreSQL, Firebase, APIs, and AI integrations.",
-    siteName: "Mustaf Ahmed",
-    locale: "en_US",
+    title: `${site.name} — ${site.role}`,
+    description,
+    siteName: site.name,
+    locale: "en_GB",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mustaf Ahmed — Full-Stack Developer (React)",
-    description:
-      "Full-Stack Developer (React) building and deploying SaaS and full-stack web apps with authentication, PostgreSQL, Firebase, APIs, and AI integrations.",
+    title: `${site.name} — ${site.role}`,
+    description,
   },
   robots: {
     index: true,
@@ -42,9 +65,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} antialiased bg-[#0f0f0f] text-white`}>
-        {children}
+    <html lang="en-GB">
+      <body
+        className={`${geist.variable} ${geistMono.variable} ${newsreader.variable} bg-canvas font-sans text-ink antialiased`}
+      >
+        <AppShell>{children}</AppShell>
         <Analytics />
       </body>
     </html>

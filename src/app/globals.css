@@ -1,28 +1,78 @@
 @import "tailwindcss";
 
-*:focus-visible {
-  outline: 2px solid #4f46e5;
-  outline-offset: 2px;
+@theme {
+  --color-canvas: #08080a;
+  --color-surface: #111216;
+  --color-ink: #f2ede4;
+  --color-mute: #a39e93;
+  --color-signal: #6ea8ff;
+  --color-warm: #d7b56d;
+  --color-line: rgb(242 237 228 / 10%);
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), ui-serif, "Iowan Old Style", Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 3.5rem;
+  background: var(--color-canvas);
 }
 
 body {
-  font-family: var(--font-inter), sans-serif;
-  background: #0f0f0f;
-  color: #ffffff;
-  line-height: 1.5;
+  min-height: 100vh;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
+::selection {
+  background: rgb(110 168 255 / 28%);
+  color: var(--color-ink);
 }
 
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+*:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
+}
+
+a,
+button {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease;
+}
+
+.reveal {
+  animation: rise 420ms ease both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
 }
